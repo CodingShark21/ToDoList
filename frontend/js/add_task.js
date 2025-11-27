@@ -10,13 +10,20 @@ function addTask() {
   // Get the text from the input box
   const textValue = task_input.value.trim();
 
-  //Only add if not emptp
+  //Only add if not empty
   if(textValue != "") {
     //Create a new item
     const li = document.createElement("li");
     li.textContent = textValue;
 
+    //Create delete button
+    const delete_button = document.createElement("button");
+    delete_button.textContent = "delete";
+    delete_button.classList.add("delete-button"); //mark it with a class
+    delete_button.type = "button";
+
     //Add the item to the list
+    li.appendChild(delete_button);
     task_list.appendChild(li);
 
     //Clear the input box
@@ -25,3 +32,5 @@ function addTask() {
     alert("Please enter a task!");
   }
 }
+
+export {task_list};
