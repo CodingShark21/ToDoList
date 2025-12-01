@@ -1,4 +1,4 @@
-const STORAGE_KEY = "todo_tasks";
+export const STORAGE_KEY = "todo_tasks";
 
 //Save task to localStorage
 function saveTasks(task_list) {
