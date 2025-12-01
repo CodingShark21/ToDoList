@@ -13,6 +13,14 @@ window.addEventListener("DOMContentLoaded", () => {
 // Listen for clicks on the Button
 add_button.addEventListener("click", addTask);
 
+// Listen for the Enter key in the input box
+task_input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); // Prevent form submission
+    addTask();
+  }
+});
+
 function addTask() {
   // Get the text from the input box
   const textValue = task_input.value.trim();
