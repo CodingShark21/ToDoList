@@ -1,0 +1,31 @@
+#add_button {
+  float: right;
+  background-color: #4CAF50;   /* Green background */
+  color: white;                /* White text */
+  padding: 10px 20px;          /* Space inside button */
+  border: none;                /* Remove default border */
+  border-radius: 5px;          /* Rounded corners */
+  cursor: pointer;             /* Pointer on hover */
+  font-size: 16px;             /* Text size */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+#add_button:hover {
+  background-color: #45a049;   /* Darker green when hovered */
+}
+
+#task_input {
+  width: 75%;              /* Control width */
+  padding: 10px;             /* Space inside the box */
+  font-size: 16px;           /* Text size */
+  border: 2px solid #ccc;    /* Light gray border */
+  border-radius: 5px;        /* Rounded corners */
+  outline: none;             /* Remove default blue outline */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Highlight when user clicks inside */
+#task_input:focus {
+  border-color: #4CAF50;     /* Green border on focus */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Glow effect */
+}
