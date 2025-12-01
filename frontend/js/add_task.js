@@ -1,7 +1,14 @@
+import {saveTasks, loadTasks } from "./storage.js";
+
 // Find the Button and input box
 const add_button = document.getElementById("add_button");
 const task_input = document.getElementById("task_input");
 const task_list = document.getElementById("task_list");
+
+//Load tasks on page load
+window.addEventListerner("DOMContentLoaded", () => {
+  loadTasks(task_list);
+});
 
 // Listen for clicks on the Button
 add_button.addEventListener("click", addTask);
@@ -28,6 +35,9 @@ function addTask() {
 
     //Clear the input box
     task_input.value = "";
+
+    // Save after adding
+    saveTasks(task_list);
   } else {
     alert("Please enter a task!");
   }

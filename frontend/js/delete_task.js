@@ -6,5 +6,8 @@ task_list.addEventListener("click", function(event) {
     console.log("Delete button clicked");
     const li = event.target.parentElement;
     li.remove();
+
+    // Save after deleting
+    saveTasks(task_list);
   }
 });
