@@ -6,7 +6,7 @@ const task_input = document.getElementById("task_input");
 const task_list = document.getElementById("task_list");
 
 //Load tasks on page load
-window.addEventListerner("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", () => {
   loadTasks(task_list);
 });
 
