@@ -1,4 +1,5 @@
 import {task_list} from "./add_task.js";
+import {saveTasks} from "./storage.js";
 
 // Event delegation: listen on the list, catch clicks on delete buttons
 task_list.addEventListener("click", function(event) {
